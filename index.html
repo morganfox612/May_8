@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="messageArea">
+
+    </div>
+    <h2>Log In</h2>
+    <form id="loginForm">
+      <input type="text" id="email-input" placeholder="Enter email address" required>
+      <input type="password" id="password-input" placeholder="Enter password" required>
+      <input type="submit" value="log in">
+    </form>
+
+    <script>
+      let messageArea = document.quesrySelector("#messageArea")
+      let user = {
+        email: "Morgan@example.com",
+        password: "fox1"
+      }
+      let form = document.querySelector('#loginForm')
+      form.addEventListener("submit", function(event) {
+        let email= document.querySelector("#email-input").value
+        let pwd= document.querySelector("#password-input").value
+        if(email == user.email && pwd == user.password) {
+          alert("Thank you for logging in!")
+        } else {
+          event.preventDefault()
+          displayErrors()
+
+        }
+        console.log("Email: ${email}\nPassword: ${pwd}")
+      })
+    </script>
+  </body>
+</html>
