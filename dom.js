@@ -1,5 +1,6 @@
-function section(){
-for (i=0; i < section; i++) {
-  section[1].style.backgroundColor = "red"
-}
-}
+var = elements
+
+window.addEventListener("scroll", function(){
+  let section_1 = document.getElementById("section1")
+  classList.add("section_1")
+})
